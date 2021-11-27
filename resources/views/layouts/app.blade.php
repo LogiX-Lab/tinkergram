@@ -18,6 +18,15 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+
+    <!-- Bootstrap core CSS -->
+   <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+   <link href="/style-note.css" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
@@ -52,6 +61,10 @@
                                 </li>
                             @endif
                         @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('post.create') }}">Create post</a>
+                            </li>
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
