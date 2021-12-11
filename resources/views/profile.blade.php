@@ -26,7 +26,7 @@
 -->
     <div class="row pt-5">
         @foreach($posts as $post)
-            <div class="col-md-4 col-sm-6 content-card">
+            <div class="animate__animated animate__tada animate-duration-2s animate__infinite col-md-4 col-sm-6 content-card ">
                 <div class="card-big-shadow">
                     <div class="card card-just-text" data-background="color" data-color="{{$loop->iteration % 3 == 0?'green':($loop->iteration % 3 == 1?'blue':'yellow')}}" data-radius="none">
                         <div class="content">

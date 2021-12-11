@@ -13,7 +13,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="//fonts.gstatic.com" rel="dns-prefetch" >
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
@@ -22,8 +22,10 @@
 	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS ---->
    <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"  />
 
    <link href="/style-note.css" rel="stylesheet">
 
