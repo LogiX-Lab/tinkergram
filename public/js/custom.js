@@ -32,3 +32,17 @@ $(document).ready(function () {
         return false;
     });
 });
+
+
+toggleNewComment = function( newCommentId ) {
+
+    var newCOmmentElm = document.getElementById( newCommentId );
+    console.log( newCOmmentElm );
+    if (newCOmmentElm.style.display == "none") {
+        newCOmmentElm.style.display = "";
+      } else {
+        newCOmmentElm.style.display = "none";
+      }
+
+
+}

@@ -142,6 +142,48 @@
                                     <div class="tv-event-button">
                                         <a href="" class="tv-submit-button reservation-button">Read More</a>
                                     </div>
+                                    <div class="tv-event-button">
+                                        <a href="#" class="tv-submit-button reservation-button" onClick="toggleNewComment('newComment_{{$article->id}}'); return false;">Add Comment</a>
+                                    </div>
+                                    <div id="newComment_{{$article->id}}" class="newcomment_block" style="display: none;">
+                                            <div class="row">
+                                                <div class="tv-reservation-form-clear">
+                                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                                        <div class="tv-reservation-block">
+                                                            <label>Food on the menu</label>
+                                                            <input class="input-field tv-reservation-input" placeholder="Food Name *" name="food_name" required="" type="text">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                                        <div class="tv-reservation-block">
+                                                            <label>Food photo</label>
+                                                            <input class="input-field tv-reservation-input" placeholder="Food Name *" name="food_image" required="" type="file">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                                        <div class="tv-reservation-block">
+                                                            <label>Rank</label>
+                                                            <input class="input-field tv-reservation-input" placeholder="Rank it * ( 1-5) " min="1" max="5" name="food_points" required="" type="number">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                                        <div class="tv-reservation-block">
+                                                            <span class="fa fa-star "></span>
+                                                            <span class="fa fa-star "></span>
+                                                            <span class="fa fa-star "></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                                        <div class="tv-reservation-block">
+                                                            <label>Description</label>
+                                                            <textarea class="tv-reservation-textarea" placeholder="About" name="food_desc" required="" type="text"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
                                     <hr style="border:3px solid #f1f1f1">
 
                                     <div class="scores">

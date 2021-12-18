@@ -1,11 +1,10 @@
 @extends('layouts.app')
 
-@section('top_content')
-    <div class="tv-banner-image" style="background: rgba(0, 0, 0, 0) url('/images/Image1.png') no-repeat scroll center top / cover;">
-        <div class="tv-opacity-medium tv-bg-black"></div>
-        <div class="tv-banner-title">
-            <div class="tv-login-form">
-
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
                 <form action="{{ route('profile.postCreate') }}" enctype="multipart/form-data" method="post">
                     @csrf
                     <div class="form-group row">
@@ -23,6 +22,7 @@
                     </div>
                 </form>
             </div>
+            <div class="col-4"></div>
         </div>
     </div>
 @endsection

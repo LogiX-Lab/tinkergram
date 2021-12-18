@@ -32,7 +32,7 @@ class HomeController extends Controller
 
         $profile = Profile::where('user_id', $user->id)->orderBy('id', 'desc')->first();
         if ( is_null($profile))
-            return create();
+            return redirect('/profile/create');
 
         $posts = \App\Models\Post::where('user_id', $user->id)->orderBy('created_at', 'desc')->get();
         $numPosts = \App\Models\Post::where('user_id', $user->id)->count();
