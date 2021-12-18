@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->text('name');
             $table->text('type');
             $table->text('image_url');
-            $table->text('description');
+            $table->text('description') -> nullable();
             $table->unsignedBigInteger('supplier_id');
 
             $table->foreign('supplier_id')->references('id')->on('suppliers');

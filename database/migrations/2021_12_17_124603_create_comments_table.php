@@ -16,10 +16,10 @@ class CreateCommentsTable extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->text('caption');
-            $table->text('image_url');
+            $table->text('caption')->nullable();
+            $table->text('image_url')->nullable();
             $table->text('description');
-            $table->text('tags');
+            $table->text('tags')->nullable();
             $table->unsignedBigInteger('points');
             $table->unsignedBigInteger('product_id');
             $table->unsignedBigInteger('user_id');
