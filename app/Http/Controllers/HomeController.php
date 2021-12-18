@@ -37,12 +37,15 @@ class HomeController extends Controller
         $posts = \App\Models\Post::where('user_id', $user->id)->orderBy('created_at', 'desc')->get();
         $numPosts = \App\Models\Post::where('user_id', $user->id)->count();
 
+        $articles = \App\Models\Comments::with(['user','product'])->get();
+
         // error here. This should be profile instead of profile.index
         return view( 'profile', [
             'user' => $user,
             'profile' => $profile,
             'posts' => $posts,
-            'numPosts' => $numPosts
+            'numPosts' => $numPosts,
+            'articles' => $articles,
         ] );;
     }
 }

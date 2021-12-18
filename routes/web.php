@@ -30,3 +30,8 @@ Route::get('/profile/edit', [App\Http\Controllers\ProfileController::class, 'edi
 Route::post('/profile/{id}/postEdit', [App\Http\Controllers\ProfileController::class, 'postEdit'])->name('profile.postEdit');
 
 Route::resource('post', App\Http\Controllers\PostController::class);
+
+// Constraints: one path level support only because of css path
+//Route::get('/myfood', [App\Http\Controllers\CommentsController::class, 'index'])->name('food.create');
+
+Route::resource('myfood', App\Http\Controllers\CommentsController::class);

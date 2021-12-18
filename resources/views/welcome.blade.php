@@ -1,132 +1,1258 @@
+<!--Template Name:citreat
+File Name:home.html
+Author Name: ThemeVault
+Author URI: http://www.themevault.net/
+License URI: http://www.themevault.net/license/-->
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html>
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Food Fusion</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="images/favicon.png" rel="icon"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/scrolling-nav.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/owl.theme.default.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link href="css/magnific-popup.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/responsive.css" rel="stylesheet">
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.dark\:text-gray-500{--tw-text-opacity:1;color:#6b7280;color:rgba(107,114,128,var(--tw-text-opacity))}}
-        </style>
-
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
+        <script src= "js/jquery.min.js" type= "text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/owl.carousel.js" type="text/javascript"></script>
+        <script src="js/magnific-popup.js" type="text/javascript"></script>
+        <script src="js/shuffle.min.js"></script>
+        <script src="js/shuffle.custom.js"></script>
+        <script src="js/counterup.min.js" type="text/javascript"></script>
+        <script src="js/waypoints.min.js" type="text/javascript"></script>
+        <script src="js/scrolling-nav.js" type="text/javascript"></script>
+        <script src="js/custom.js" type="text/javascript"></script>
     </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+    <body id="home">
 
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
-                        <g clip-path="url(#clip0)" fill="#EF3B2D">
-                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
-                        </g>
-                    </svg>
-                </div>
-
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
-                                </div>
+        <!--Header Section-->
+        <header>
+            <nav class="navbar navbar-default navbar-fixed-top tv-navbar-custom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12 col-xs-12">
+                            <div class="navbar-header text-center">
+                                <a href="home.html" class="navbar-brand tv-citreat-logo">Food Fusion</a>
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#tv-navbar">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
                             </div>
                         </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
-                                </div>
+                        <div class="col-md-8 col-sm-12 col-xs-12">
+                            <div class="collapse navbar-collapse" id="tv-navbar">
+                                <ul class="nav navbar-nav text-center tv-small-bg tv-active-menu">
+                                    <li class="tv-drop-menu">
+                                        <a data-toggle="dropdown" aria-expanded="false" class="tv-menu">Pages<i class="fa fa-angle-down"></i></a>
+                                        <ul class="dropdown-menu tv-sub-menu">
+                                            <li class="dropdown-submenu Navigation-listItem is-dropdown">
+                                                <a href="aboutus.html">About Us</a>
+                                                <a href="ourteam.html">Chef Team</a>
+                                                <a href="promotions.html">Promotions</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="tv-drop-menu">
+                                        <a data-toggle="dropdown" aria-expanded="false" class="tv-menu">Services<i class="fa fa-angle-down"></i></a>
+                                        <ul class="dropdown-menu tv-sub-menu">
+                                            <li class="dropdown-submenu Navigation-listItem is-dropdown ">
+                                                <a href="services.html">All Services</a>
+                                                <a href="gallery.html">Gallery</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class=""><a href="menucard.html" class="tv-menu">Menu Card</a></li>
+                                    <li class=""><a href="contactus.html" class="tv-menu">Contact Us</a></li>
+                                    <li class=""><a href="shortcodes.html" class="tv-menu">ShortCodes</a></li>
+                                    <li class="tv-drop-menu">
+                                        <a data-toggle="dropdown" aria-expanded="false" class="tv-menu">My FOOD<i class="fa fa-angle-down"></i></a>
+                                        <ul class="dropdown-menu tv-sub-menu">
+                                            <li class="dropdown-submenu Navigation-listItem is-dropdown ">
+                                                <a href="{{ route('login') }}">Login</a>
+                                                <a href="{{ route('register') }}">Register</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
+            </nav>
 
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
-
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
-                            </a>
-
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
-
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
+            <!--Banner Section-->
+            <div class="tv-banner-image" style="background: rgba(0, 0, 0, 0) url('images/Image1.png') no-repeat scroll center top / cover;">
+                <div class="tv-opacity-medium tv-bg-black"></div>
+                <div class="tv-banner-title">
+                    <h2>Perfectly Balanced</h2>
+                    <h1>Quality & Taste</h1>
+                    <div class="tv-contact-details">
+                        <div class="tv-header-call">
+                            <img src="images/telephone.png">
+                            <h3>Call Us</h3>
+                            <p>+8125852000</p>
                         </div>
-                    </div>
-
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                        <div class="tv-header-location">
+                            <img src="images/location.png">
+                            <h3>Location</h3>
+                            <p>8800 Orchid Rd, Singapore</p>
+                        </div>
+                        <div class="tv-header-email">
+                            <img src="images/envelope(1).png">
+                            <h3>Email</h3>
+                            <p>web@foodfusion.sg</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <!--End Banner Section-->
+        </header>
+        <!--End Header Section-->
+
+        <!--Well Section-->
+        <section class="tv-section-padding" id="well">
+            <div class="tv-fixed-img tv-section-padding-70" style="background-image:url('images/Image2.png')">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-offset-6 col-md-6 col-sm-offset-7 col-sm-5 col-xs-12">
+                            <div class="tv-well-block">
+                                <h3>Welcome Eating Well</h3>
+                                <p>Donec placerat enim ut urna ornare, eget egestas arcu sagittis. Duis suscipit suscipit elit et egestas. Etiam in fermentum enim, sit amet fringilla velit. Nam molestie justo nibh, sed aliquam felis pulvinar eget. In semper sit amet ipsum vitae mollis. Nunc orci libero, finibus sit amet ligula nec, commodo imperdiet lectus. Duis pharetra volutpat nisi non lobortis. Maecenas malesuada leo ligula, malesuada venenatis est dapibus a. Nunc eu finibus lectus, vel vehicula odio.</p>
+                                <div class="tv-citreat-button">
+                                    <a href="">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Well Section-->
+
+        <!--Services Section-->
+        <section class="tv-section-padding">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 padding-0 col-sm-6 col-xs-12">
+                        <div class="tv-service-img">
+                            <img src="images/Image3.png" class="width-100 img-responsive" alt="serviceicon">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="tv-service-title">
+                            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                            <h3>Our Best Services</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="tv-service-content">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img src="images/serviceicon1.png" class="media-object" alt="serviceicon">
+                                        </div>
+                                        <div class="media-body">
+                                            <h4>Fast Delivered</h4>
+                                            <hr class="hr-service">
+                                            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="tv-service-content">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img src="images/serviceicon2.png" class="media-object" alt="serviceicon">
+                                        </div>
+                                        <div class="media-body">
+                                            <h4>Best Quality</h4>
+                                            <hr class="hr-service">
+                                            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="tv-service-content">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img src="images/serviceicon3.png" class="media-object" alt="serviceicon">
+                                        </div>
+                                        <div class="media-body">
+                                            <h4>Ingredient Supply</h4>
+                                            <hr class="hr-service">
+                                            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="tv-service-content">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img src="images/serviceicon5.png" class="media-object" alt="serviceicon">
+                                        </div>
+                                        <div class="media-body">
+                                            <h4>Online Booking</h4>
+                                            <hr class="hr-service">
+                                            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="tv-service-content">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img src="images/event.png" class="media-object" alt="serviceicon">
+                                        </div>
+                                        <div class="media-body">
+                                            <h4>Event Booking</h4>
+                                            <hr class="hr-service">
+                                            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="tv-service-content">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img src="images/serviceicon4.png" class="media-object" alt="serviceicon">
+                                        </div>
+                                        <div class="media-body">
+                                            <h4>Freshly Made</h4>
+                                            <hr class="hr-service">
+                                            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Services Section-->
+
+        <!--Menu Card Section-->
+        <section class="tv-section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="tv-citreat-title">
+                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                        <h3>Our Best Menu</h3>
+                    </div>
+                    <div class="tv-menu-clear">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="tv-home-menu-title">
+                                <h4>Starters</h4>
+                                <p>Something to start with</p>
+                                <hr class="hr-service">
+                            </div>
+                            <div class="tv-home-menu">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="images/Image13.jpg" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>Tasty Sandwiches</h4>
+                                        <span>$6.19</span>
+                                        <p>With ham, eggs, cheese and arugula for perfect start of the dinner!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tv-home-menu">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="images/Image14.jpg" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>Gourmet Oysters</h4>
+                                        <span>$8.99</span>
+                                        <p>With ham, eggs, cheese and arugula for perfect start of the dinner!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="tv-home-menu-title">
+                                <h4>Main dishes</h4>
+                                <p>For hungry men</p>
+                                <hr class="hr-service">
+                            </div>
+                            <div class="tv-home-menu">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="images/Image15.jpg" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>Sirloin Steak</h4>
+                                        <span>$19.99</span>
+                                        <p>With rosemary and cherry tomatoes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tv-home-menu">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="images/Image16.jpg" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>Thai Noodles</h4>
+                                        <span>$4.99</span>
+                                        <p>With chicken or vegetables.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="tv-home-menu-title">
+                                <h4>Soups</h4>
+                                <p>Warm and full of taste</p>
+                                <hr class="hr-service">
+                            </div>
+                            <div class="tv-home-menu">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="images/Image17.jpg" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>Angel Soup</h4>
+                                        <span>$3.69</span>
+                                        <p>From different vegetables.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tv-home-menu">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="images/Image18.jpg" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>Yellow Soup</h4>
+                                        <span>$3.89</span>
+                                        <p>Traditional soup from India.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="tv-home-menu-title">
+                                <h4>Desserts</h4>
+                                <p>Something sweet for the end, right?</p>
+                                <hr class="hr-service">
+                            </div>
+                            <div class="tv-home-menu">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="images/Image19.jpg" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>Walnuts Cake</h4>
+                                        <span>$36.99</span>
+                                        <p>One amazing cake for you.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tv-home-menu">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="images/Image20.jpg" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>Cheese Cake</h4>
+                                        <span>$8.49</span>
+                                        <p>This is our home-made super delicious cheese cake</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Menu Card Section-->
+
+        <!--Works Section-->
+        <section class="tv-section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+                        <div class="tv-citreat-title">
+                            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                            <h3>How It Works</h3>
+                        </div>
+                        <div class="row">
+                            <div class="tv-work-block-clear">
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <div class="tv-work-block">
+                                        <img src="images/menuicon.png" alt="workicon" />
+                                        <h4>You Explore The Menu</h4>
+                                        <p>Pellentesque condimentum vitae odio ut euismod. Vestibulum at iaculis arcu. Aenean in condimentum dui.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <div class="tv-work-block">
+                                        <img src="images/serviceicon3.png" alt="workicon" />
+                                        <h4>We Make Your Meal</h4>
+                                        <p>Pellentesque condimentum vitae odio ut euismod. Vestibulum at iaculis arcu. Aenean in condimentum dui.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <div class="tv-work-block">
+                                        <img src="images/serviceicon1.png" alt="workicon" />
+                                        <h4>We Deliver</h4>
+                                        <p>Pellentesque condimentum vitae odio ut euismod. Vestibulum at iaculis arcu. Aenean in condimentum dui.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="tv-work-img">
+                            <img src="images/Image5.png" class="width-100 img-responsive" alt="worksimg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Works Section-->
+
+        <!--Reservation-->
+        <section class="tv-section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="tv-citreat-title">
+                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                        <h3>Reservation Now</h3>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="tv-reservation-img">
+                            <img src="images/Image21.jpg" class="width-100 img-responsive" alt="reservationimg" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="tv-reservation-content">
+                            <form>
+                                <div class="row">
+                                    <div class="tv-reservation-form-clear">
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="tv-reservation-block">
+                                                <label>Name</label>
+                                                <input class="input-field tv-reservation-input" placeholder="First Name *" name="name" required="" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="tv-reservation-block">
+                                                <label>Time</label>
+                                                <input class="input-field tv-reservation-input" placeholder="Time *" name="name" required="" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="tv-reservation-block">
+                                                <label>Telephone</label>
+                                                <input class="input-field tv-reservation-input" placeholder="Telephone *" name="phone" required="" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="tv-reservation-block">
+                                                <label>Email</label>
+                                                <input class="input-field tv-reservation-input" placeholder="Email *" name="email" required="" type="email">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class="tv-reservation-block">
+                                                <label>Supoortive Message</label>
+                                                <textarea class="tv-reservation-textarea" placeholder="Supportive message" name="message" required=""></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class="tv-citreat-button text-center">
+                                                <button type="submit" class="tv-submit-button reservation-button">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Reservation-->
+
+        <!--Testimonial Section-->
+        <section class="tv-section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="tv-citreat-title">
+                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                        <h3>Testimonial</h3>
+                    </div>
+                    <div id="owl-example" class="owl-carousel owl-theme">
+                        <div class="tv-testimonial-block">
+                            <div class="tv-testimonial-img">
+                                <img src="images/comment1.jpg" class="img-circle img-responsive" alt="testiimg" style="width:80px;">
+                            </div>
+                            <div class="tv-testimonial-content">
+                                <p>Donec feugiat mauris non sem gravida, consequat luctus arcu sagittis. Integer vestibulum, sem et bibendum fringilla, orci lorem tempor sem, luctus tincidunt est arcu eu arcu. Nam arcu nulla, dignissim id tempor eget, sollicitudin vel metus. </p>
+                                <h4>David Miller</h4>
+                                <h5>Happy Client</h5>
+                            </div>
+                        </div>
+                        <div class="tv-testimonial-block">
+                            <div class="tv-testimonial-img">
+                                <img src="images/comment2.jpg" class="img-circle img-responsive" alt="testiimg" style="width:80px;">
+                            </div>
+                            <div class="tv-testimonial-content">
+                                <p>Donec feugiat mauris non sem gravida, consequat luctus arcu sagittis. Integer vestibulum, sem et bibendum fringilla, orci lorem tempor sem, luctus tincidunt est arcu eu arcu. Nam arcu nulla, dignissim id tempor eget, sollicitudin vel metus. </p>
+                                <h4>David Miller</h4>
+                                <h5>Happy Client</h5>
+                            </div>
+                        </div>
+                        <div class="tv-testimonial-block">
+                            <div class="tv-testimonial-img">
+                                <img src="images/comment3.jpg" class="img-circle img-responsive" alt="testiimg" style="width:80px;">
+                            </div>
+                            <div class="tv-testimonial-content">
+                                <p>Donec feugiat mauris non sem gravida, consequat luctus arcu sagittis. Integer vestibulum, sem et bibendum fringilla, orci lorem tempor sem, luctus tincidunt est arcu eu arcu. Nam arcu nulla, dignissim id tempor eget, sollicitudin vel metus. </p>
+                                <h4>David Miller</h4>
+                                <h5>Happy Client</h5>
+                            </div>
+                        </div>
+                        <div class="tv-testimonial-block">
+                            <div class="tv-testimonial-img">
+                                <img src="images/comment1.jpg" class="img-circle img-responsive" alt="testiimg" style="width:80px;">
+                            </div>
+                            <div class="tv-testimonial-content">
+                                <p>Donec feugiat mauris non sem gravida, consequat luctus arcu sagittis. Integer vestibulum, sem et bibendum fringilla, orci lorem tempor sem, luctus tincidunt est arcu eu arcu. Nam arcu nulla, dignissim id tempor eget, sollicitudin vel metus. </p>
+                                <h4>David Miller</h4>
+                                <h5>Happy Client</h5>
+                            </div>
+                        </div>
+                        <div class="tv-testimonial-block">
+                            <div class="tv-testimonial-img">
+                                <img src="images/comment2.jpg" class="img-circle img-responsive" alt="testiimg" style="width:80px;">
+                            </div>
+                            <div class="tv-testimonial-content">
+                                <p>Donec feugiat mauris non sem gravida, consequat luctus arcu sagittis. Integer vestibulum, sem et bibendum fringilla, orci lorem tempor sem, luctus tincidunt est arcu eu arcu. Nam arcu nulla, dignissim id tempor eget, sollicitudin vel metus. </p>
+                                <h4>David Miller</h4>
+                                <h5>Happy Client</h5>
+                            </div>
+                        </div>
+                        <div class="tv-testimonial-block">
+                            <div class="tv-testimonial-img">
+                                <img src="images/comment3.jpg" class="img-circle img-responsive" alt="testiimg" style="width:80px;">
+                            </div>
+                            <div class="tv-testimonial-content">
+                                <p>Donec feugiat mauris non sem gravida, consequat luctus arcu sagittis. Integer vestibulum, sem et bibendum fringilla, orci lorem tempor sem, luctus tincidunt est arcu eu arcu. Nam arcu nulla, dignissim id tempor eget, sollicitudin vel metus. </p>
+                                <h4>David Miller</h4>
+                                <h5>Happy Client</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Testimonial Section-->
+
+        <script>
+            $(document).ready(function () {
+                $('#owl-example').owlCarousel({
+                    margin: 10,
+                    nav: true,
+                    items: 3,
+                    dots: false,
+//      navText : ['<i class="fa fa-arrow-left" aria-hidden="true"></i>','<i class="fa fa-arrow-right" aria-hidden="true"></i>']
+                    navText: ["<img src='images/left-arrow.png'>", "<img src='images/right-arrow.png'>"],
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        600: {
+                            items: 1
+                        },
+                        700: {
+                            items: 3
+                        },
+                        1000: {
+                            items: 3
+                        }
+                    }
+                });
+            });
+        </script>
+
+        <!--Awesome Dishes Category-->
+        <section class="tv-section-padding" id="dishes">
+            <div class="container">
+                <div class="row">
+                    <div class="tv-citreat-title">
+                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                        <h3>Our Awesome Dishes</h3>
+                    </div>
+                    <div class="tv-dishescat-clear tv-dishescat-clear-small">
+                        <div class="col-md-3 col-sm-4 col-xs-12">
+                            <div class="tv-dishescat-block">
+                                <div class="menu-item">
+                                    <div class="image hover-zoom">
+                                        <a><img src="images/Image24.jpg" class="width-100 img-responsive" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="menu-item-content">
+                                    <h4>Appetizers</h4>
+                                    <p>Donec feugiat mauris non sem gravida, consequat luctus arcu sagittis. Integer.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-12">
+                            <div class="tv-dishescat-block">
+                                <div class="menu-item">
+                                    <div class="image hover-zoom">
+                                        <a><img src="images/Image25.jpg" class="width-100 img-responsive" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="menu-item-content">
+                                    <h4>Meat Dishes</h4>
+                                    <p>Donec feugiat mauris non sem gravida, consequat luctus arcu sagittis. Integer.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-12">
+                            <div class="tv-dishescat-block">
+                                <div class="menu-item">
+                                    <div class="image hover-zoom">
+                                        <a><img src="images/Image26.jpg" class="width-100 img-responsive" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="menu-item-content">
+                                    <h4>Seafood</h4>
+                                    <p>Donec feugiat mauris non sem gravida, consequat luctus arcu sagittis. Integer.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-12">
+                            <div class="tv-dishescat-block">
+                                <div class="menu-item">
+                                    <div class="image hover-zoom">
+                                        <a><img src="images/Image27.jpg" class="width-100 img-responsive" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="menu-item-content">
+                                    <h4>Cake</h4>
+                                    <p>Donec feugiat mauris non sem gravida, consequat luctus arcu sagittis. Integer.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-12">
+                            <div class="tv-dishescat-block">
+                                <div class="menu-item">
+                                    <div class="image hover-zoom">
+                                        <a><img src="images/Image28.jpg" class="width-100 img-responsive" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="menu-item-content">
+                                    <h4>Wine List</h4>
+                                    <p>Donec feugiat mauris non sem gravida, consequat luctus arcu sagittis. Integer.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-12">
+                            <div class="tv-dishescat-block">
+                                <div class="menu-item">
+                                    <div class="image hover-zoom">
+                                        <a><img src="images/Image29.jpg" class="width-100 img-responsive" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="menu-item-content">
+                                    <h4>Chili</h4>
+                                    <p>Donec feugiat mauris non sem gravida, consequat luctus arcu sagittis. Integer.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-12">
+                            <div class="tv-dishescat-block">
+                                <div class="menu-item">
+                                    <div class="image hover-zoom">
+                                        <a><img src="images/Image30.jpg" class="width-100 img-responsive" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="menu-item-content">
+                                    <h4>Salads</h4>
+                                    <p>Donec feugiat mauris non sem gravida, consequat luctus arcu sagittis. Integer.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-12">
+                            <div class="tv-dishescat-block">
+                                <div class="menu-item">
+                                    <div class="image hover-zoom">
+                                        <a><img src="images/Image31.jpg" class="width-100 img-responsive" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="menu-item-content">
+                                    <h4>Noodles</h4>
+                                    <p>Donec feugiat mauris non sem gravida, consequat luctus arcu sagittis. Integer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--EndAwesome Dishes Category-->
+
+        <!--Statistics Section-->
+        <section class="tv-section-padding">
+            <div class="tv-fixed-img tv-section-padding-70" style="background-image:url('images/Image22.png')">
+                <div class="container">
+                    <div class="tv-citreat-title">
+                        <p class="counter-p">Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                        <h3>Our Statistics</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3 col-xs-6">
+                            <div class="tv-statistics-block">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="images/users.png" class="media-object" style="width:40px;" />
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="tv-statistics-counter">
+                                            <p class="counter" data-slno="1" data-min="0" data-max="4567" data-delay=".9" data-increment="1">4567</p>
+                                            <h5>Happy Clients</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-6">
+                            <div class="tv-statistics-block">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="images/spoon.png" class="media-object" style="width:40px;" />
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="tv-statistics-counter">
+                                            <p class="counter" data-slno="1" data-min="0" data-max="6163" data-delay=".9" data-increment="1">6163</p>
+                                            <h5>Dishes Cooked</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-6">
+                            <div class="tv-statistics-block">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="images/glass.png" class="media-object" style="width:40px;" />
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="tv-statistics-counter">
+                                            <p class="counter" data-slno="1" data-min="0" data-max="1345" data-delay=".9" data-increment="1">1345</p>
+                                            <h5>Mugs Of Beer</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-6">
+                            <div class="tv-statistics-block">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="images/trophy.png" class="media-object" style="width:40px;" />
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="tv-statistics-counter">
+                                            <p class="counter" data-slno="1" data-min="0" data-max="5670" data-delay=".9" data-increment="1">5670</p>
+                                            <h5>Awards Won</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Statistics Section-->
+
+        <!--Counter Script-->
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+                $('.counter').counterUp({
+                    delay: 20,
+                    time: 1000
+                });
+            });
+        </script>
+        <!--End Counter Script-->
+
+        <!--Event Section-->
+        <section class="tv-section-padding" id="event">
+            <div class="tv-fixed-img tv-section-padding-70" style="background-image:url('images/Image6.png')">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-offset-6 col-md-6 col-sm-offset-6 col-sm-6 col-xs-12">
+                            <div class="tv-planning-block">
+                                <h4>Planning An Event</h4>
+                                <div class="tv-event-button text-center">
+                                    <a  href="" class="tv-submit-button reservation-button">Get in touch</a>
+                                </div>
+                                <p class="planning-1">Name is the perfect venue for almost any event. big or small</p>
+                                <p class="planning-2">(Vivamus quam sapien, scelerisque a libero at)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Event Section-->
+
+        <!--Gallery Section-->
+        <section class="tv-section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="tv-citreat-title">
+                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                        <h3>Our Gallery</h3>
+                    </div>
+                    <ul id="grid" class="my-shuffle-container">
+                        <li class="item grid-item col-md-3 col-sm-6 col-xs-12 tv-grid-gutter-10">
+                            <a href="images/Image12.jpeg" data-image-popup="">
+                                <div class="portfolio-img">
+
+                                    <figure>
+                                        <img src="images/Image12.jpeg" alt="portfolio-image">
+                                        <figcaption>
+                                            <div class="tv-img-content">
+                                                <img src="images/image-gallery.png" style="width: 40px;"/>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item grid-item col-md-3 col-sm-6 col-xs-12 tv-grid-gutter-10">
+                            <a href="images/Image13.jpg" data-image-popup="">
+                                <div class="portfolio-img">
+
+                                    <figure>
+                                        <img src="images/Image13.jpg" alt="portfolio-image">
+                                        <figcaption>
+                                            <div class="tv-img-content">
+                                                <img src="images/image-gallery.png" style="width: 40px;"/>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item grid-item col-md-3 col-sm-6 col-xs-12 tv-grid-gutter-10">
+                            <a href="images/Image14.jpg" data-image-popup="">
+                                <div class="portfolio-img">
+
+                                    <figure>
+                                        <img src="images/Image14.jpg" alt="portfolio-image">
+                                        <figcaption>
+                                            <div class="tv-img-content">
+                                                <img src="images/image-gallery.png" style="width: 40px;"/>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item grid-item col-md-3 col-sm-6 col-xs-12 tv-grid-gutter-10">
+                            <a href="images/Image12.jpeg" data-image-popup="">
+                                <div class="portfolio-img">
+
+                                    <figure>
+                                        <img src="images/Image12.jpeg" alt="portfolio-image">
+                                        <figcaption>
+                                            <div class="tv-img-content">
+                                                <img src="images/image-gallery.png" style="width: 40px;"/>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item grid-item col-md-3 col-sm-6 col-xs-12 tv-grid-gutter-10">
+                            <a href="images/Image17.jpg" data-image-popup="">
+                                <div class="portfolio-img">
+                                    <figure>
+                                        <img src="images/Image17.jpg" alt="portfolio-image">
+                                        <figcaption>
+                                            <div class="tv-img-content">
+                                                <img src="images/image-gallery.png" style="width: 40px;"/>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item grid-item col-md-3 col-sm-6 col-xs-12 tv-grid-gutter-10">
+                            <a href="images/Image19.jpg" data-image-popup="">
+                                <div class="portfolio-img">
+                                    <figure>
+                                        <img src="images/Image19.jpg" alt="portfolio-image">
+                                        <figcaption>
+                                            <div class="tv-img-content">
+                                                <img src="images/image-gallery.png" style="width: 40px;"/>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item grid-item col-md-3 col-sm-6 col-xs-12 tv-grid-gutter-10">
+                            <a href="images/Image21.jpg" data-image-popup="">
+                                <div class="portfolio-img">
+
+                                    <figure>
+                                        <img src="images/Image21.jpg" alt="portfolio-image">
+                                        <figcaption>
+                                            <div class="tv-img-content">
+                                                <img src="images/image-gallery.png" style="width: 40px;"/>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item grid-item col-md-3 col-sm-6 col-xs-12 tv-grid-gutter-10">
+                            <a href="images/Image11.jpeg" data-image-popup="">
+                                <div class="portfolio-img">
+                                    <figure>
+                                        <img src="images/Image11.jpeg" alt="portfolio-image">
+                                        <figcaption>
+                                            <div class="tv-img-content">
+                                                <img src="images/image-gallery.png" style="width: 40px;"/>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item grid-item col-md-3 col-sm-6 col-xs-12 tv-grid-gutter-10">
+                            <a href="images/Image10.jpeg" data-image-popup="">
+                                <div class="portfolio-img">
+
+                                    <figure>
+                                        <img src="images/Image10.jpeg" alt="portfolio-image">
+                                        <figcaption>
+                                            <div class="tv-img-content">
+                                                <img src="images/image-gallery.png" style="width: 40px;"/>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item grid-item col-md-3 col-sm-6 col-xs-12 tv-grid-gutter-10">
+                            <a href="images/Image7.png" data-image-popup="">
+                                <div class="portfolio-img">
+                                    <figure>
+                                        <img src="images/Image7.png" alt="portfolio-image">
+                                        <figcaption>
+                                            <div class="tv-img-content">
+                                                <img src="images/image-gallery.png" style="width: 40px;"/>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item grid-item col-md-3 col-sm-6 col-xs-12 tv-grid-gutter-10">
+                            <a href="images/Image8.jpeg" data-image-popup="">
+                                <div class="portfolio-img">
+                                    <figure>
+                                        <img src="images/Image8.jpeg" alt="portfolio-image">
+                                        <figcaption>
+                                            <div class="tv-img-content">
+                                                <img src="images/image-gallery.png" style="width: 40px;"/>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item grid-item col-md-3 col-sm-6 col-xs-12 tv-grid-gutter-10">
+                            <div class="portfolio-img">
+                                <a href="images/Image4.png" data-image-popup="">
+                                    <figure>
+                                        <img src="images/Image4.png" alt="portfolio-image">
+                                        <figcaption>
+                                            <div class="tv-img-content">
+                                                <img src="images/image-gallery.png" style="width: 40px;"/>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--End Gallery Section-->
+
+        <!--Our Chef Section-->
+        <section class="tv-section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="tv-citreat-title">
+                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                        <h3>Our Chef</h3>
+                    </div>
+                    <div id="owl-example1" class="owl-carousel owl-theme">
+                        <div class="tv-chef-block">
+                            <div class="tv-chef-img">
+                                <img src="images/chef1.png" class="img-circle img-responsive" alt="testiimg" style="width:150px; height:150px;">
+                            </div>
+                            <div class="tv-chef-content">
+                                <h4>Laura Marsh</h4>
+                                <p>Donec feugiat mauris non sem gravida, consequat luctus arcu sagittis. Integer vestibulum, sem et bibendum fringilla</p>
+                                <div class="tv-social-navbar">
+                                    <a href="#"><span class="fa fa-facebook-f"></span></a>
+                                    <a href="#"><span class="fa fa-twitter"></span></a>
+                                    <a href="#"><span class="fa fa-google-plus"></span></a>
+                                    <a href="#"><span class="fa fa-linkedin"></span></a>
+                                    <a href="#"><span class="fa fa-pinterest"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tv-chef-block">
+                            <div class="tv-chef-img">
+                                <img src="images/chef2.png" class="img-circle img-responsive" alt="testiimg" style="width:150px; height:150px;">
+                            </div>
+                            <div class="tv-chef-content">
+                                <h4>Steve Harmision</h4>
+                                <p>Donec feugiat mauris non sem gravida, consequat luctus arcu sagittis. Integer vestibulum, sem et bibendum fringilla</p>
+                                <div class="tv-social-navbar">
+                                    <a href="#"><span class="fa fa-facebook-f"></span></a>
+                                    <a href="#"><span class="fa fa-twitter"></span></a>
+                                    <a href="#"><span class="fa fa-google-plus"></span></a>
+                                    <a href="#"><span class="fa fa-linkedin"></span></a>
+                                    <a href="#"><span class="fa fa-pinterest"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tv-chef-block">
+                            <div class="tv-chef-img">
+                                <img src="images/chef3.png" class="img-circle img-responsive" alt="testiimg" style="width:150px; height:150px;">
+                            </div>
+                            <div class="tv-chef-content">
+                                <h4>Charlotte edwards</h4>
+                                <p>Donec feugiat mauris non sem gravida, consequat luctus arcu sagittis. Integer vestibulum, sem et bibendum fringilla</p>
+                                <div class="tv-social-navbar">
+                                    <a href="#"><span class="fa fa-facebook-f"></span></a>
+                                    <a href="#"><span class="fa fa-twitter"></span></a>
+                                    <a href="#"><span class="fa fa-google-plus"></span></a>
+                                    <a href="#"><span class="fa fa-linkedin"></span></a>
+                                    <a href="#"><span class="fa fa-pinterest"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tv-chef-block">
+                            <div class="tv-chef-img">
+                                <img src="images/chef1.png" class="img-circle img-responsive" alt="testiimg" style="width:150px; height:150px;">
+                            </div>
+                            <div class="tv-chef-content">
+                                <h4>Charlotte edwards</h4>
+                                <p>Donec feugiat mauris non sem gravida, consequat luctus arcu sagittis. Integer vestibulum, sem et bibendum fringilla</p>
+                                <div class="tv-social-navbar">
+                                    <a href="#"><span class="fa fa-facebook-f"></span></a>
+                                    <a href="#"><span class="fa fa-twitter"></span></a>
+                                    <a href="#"><span class="fa fa-google-plus"></span></a>
+                                    <a href="#"><span class="fa fa-linkedin"></span></a>
+                                    <a href="#"><span class="fa fa-pinterest"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tv-chef-block">
+                            <div class="tv-chef-img">
+                                <img src="images/chef2.png" class="img-circle img-responsive" alt="testiimg" style="width:150px; height:150px;">
+                            </div>
+                            <div class="tv-chef-content">
+                                <h4>Charlotte edwards</h4>
+                                <p>Donec feugiat mauris non sem gravida, consequat luctus arcu sagittis. Integer vestibulum, sem et bibendum fringilla</p>
+                                <div class="tv-social-navbar">
+                                    <a href="#"><span class="fa fa-facebook-f"></span></a>
+                                    <a href="#"><span class="fa fa-twitter"></span></a>
+                                    <a href="#"><span class="fa fa-google-plus"></span></a>
+                                    <a href="#"><span class="fa fa-linkedin"></span></a>
+                                    <a href="#"><span class="fa fa-pinterest"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tv-chef-block">
+                            <div class="tv-chef-img">
+                                <img src="images/chef3.png" class="img-circle img-responsive" alt="testiimg" style="width:150px; height:150px;">
+                            </div>
+                            <div class="tv-chef-content">
+                                <h4>Charlotte edwards</h4>
+                                <p>Donec feugiat mauris non sem gravida, consequat luctus arcu sagittis. Integer vestibulum, sem et bibendum fringilla</p>
+                                <div class="tv-social-navbar">
+                                    <a href="#"><span class="fa fa-facebook-f"></span></a>
+                                    <a href="#"><span class="fa fa-twitter"></span></a>
+                                    <a href="#"><span class="fa fa-google-plus"></span></a>
+                                    <a href="#"><span class="fa fa-linkedin"></span></a>
+                                    <a href="#"><span class="fa fa-pinterest"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Our Chef Section-->
+
+        <script>
+            $(document).ready(function () {
+                $('#owl-example1').owlCarousel({
+                    margin: 10,
+                    nav: true,
+                    items: 3,
+                    dots: false,
+//      navText : ['<i class="fa fa-arrow-left" aria-hidden="true"></i>','<i class="fa fa-arrow-right" aria-hidden="true"></i>']
+                    navText: ["<img src='images/left-arrow.png'>", "<img src='images/right-arrow.png'>"],
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        600: {
+                            items: 1
+                        },
+                        700: {
+                            items: 3
+                        },
+                        1000: {
+                            items: 3
+                        }
+                    }
+                });
+            });
+        </script>
+
+        <!--Blog Section-->
+        <section class="tv-section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="tv-citreat-title">
+                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                        <h3>Latest Blog</h3>
+                    </div>
+                    <div class="tv-blog-clear">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="tv-blog-block">
+                                <img src="images/Image11.jpeg" class="width-100 img-responsive" alt="blogimg" />
+                                <div class="media">
+                                    <div class="media-left">
+                                        <h4>31</h4>
+                                        <p>DEC</p>
+                                    </div>
+                                    <div class="media-body">
+                                        <p>I must explain to you how all this mistaken idea of denouncing pleasure</p>
+                                        <hr class="hr-service">
+                                        <span>Posted By:Admin</span>
+                                    </div>
+                                </div>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil</p>
+                                <div class="tv-event-button">
+                                    <a href="" class="tv-submit-button reservation-button">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="tv-blog-block">
+                                <img src="images/Image12.jpeg" class="width-100 img-responsive" alt="blogimg" />
+                                <div class="media">
+                                    <div class="media-left">
+                                        <h4>31</h4>
+                                        <p>DEC</p>
+                                    </div>
+                                    <div class="media-body">
+                                        <p>I must explain to you how all this mistaken idea of denouncing pleasure</p>
+                                        <hr class="hr-service">
+                                        <span>Posted By:Admin</span>
+                                    </div>
+                                </div>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil</p>
+                                <div class="tv-event-button">
+                                    <a href="" class="tv-submit-button reservation-button">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Blog Section-->
+
+        <!--Footer Section-->
+        <footer class="tv-section-padding">
+            <div class="tv-fixed-img tv-section-footer-padding" style="background-image:url('images/Image7.png')">
+                <div class="tv-footer-bg tv-bg-citreat"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3 col-xs-12">
+                            <div class="tv-footer-title">
+                                <a href="home.html">FoodFusion</a>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <div class="tv-footer-desc">
+                                <ul class="list-unstyled footer-menu">
+                                    <li class=""><a class="tv-menu">home</a></li>
+                                    <li class=""><a class="tv-menu">Services</a></li>
+                                    <li class=""><a class="tv-menu">Menu</a></li>
+                                    <li class=""><a class="tv-menu">Reservation</a></li>
+                                    <li class=""><a class="tv-menu">Dishes</a></li>
+                                    <li class=""><a class="tv-menu">Gallery</a></li>
+                                    <li class=""><a class="tv-menu">Blog</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="tv-footer-copyright text-center">
+                                <!--Do not remove Backlink from footer of the template. To remove it you can purchase the Backlink !-->
+                                <p>&copy; All right reserved. Designed by <a href="https://www.themevault.net">ThemeVault</a> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--End Footer Section-->
+
+        <!--Magnefic Popup Script-->
+        <script>
+            $(document).ready(function () {
+                var $imagePopup = $('[data-image-popup]');
+                /*Image*/
+                $imagePopup.magnificPopup({
+                    type: 'image',
+                    gallery: {
+                        enabled: true
+                    }
+                });
+            });
+        </script>
+        <!--Magnefic Popup Script Ends Here..-->
+
+        <a id="back-to-top" style="display: none;"><img src="images/groceries.png" /></a>
+
     </body>
 </html>
