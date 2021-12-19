@@ -13,7 +13,7 @@ class Products extends Eloquent
     protected $table = "products";
 
     public function comments() {
-        return $this-> hasMany('App\Models\Products');
+        return $this-> hasMany('App\Models\Comments');
     }
 
     public function supplier() {
